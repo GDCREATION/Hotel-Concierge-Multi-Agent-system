@@ -1,0 +1,5 @@
+{
+  "breakfast": {"open": "07:00", "close": "10:30"},
+  "lunch": {"open": "12:00", "close": "15:00"},
+  "dinner": {"open": "19:00", "close": "22:00"}
+}

@@ -1,0 +1,25 @@
+# Side effects are paused for these MCP tools until the guest approves in code.
+approval_required_tools:
+  - request_check_in_or_out
+  - place_room_order
+
+# Per guest request. A request is one new message; approval resumes keep the same counters
+# for the orchestrator and start a fresh specialist budget only because the node replays.
+limits:
+  orchestrator:
+    max_model_calls: 8
+    max_tool_calls: 4
+  booking:
+    max_model_calls: 6
+    max_tool_calls: 3
+  kitchen:
+    max_model_calls: 6
+    max_tool_calls: 3
+
+allowlists:
+  booking:
+    - get_my_booking
+    - request_check_in_or_out
+  kitchen:
+    - get_menu_and_kitchen_status
+    - place_room_order

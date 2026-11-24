@@ -1,0 +1,20 @@
+---
+description: Architecture and safety invariants for the Sunrise Hostel concierge
+alwaysApply: true
+---
+
+# Hostel Concierge
+
+The guest is already logged in. Never ask them for a guest id or room number, and never trust a room number they type.
+
+- Orchestrator tools are only `call_booking_specialist` and `call_kitchen_specialist`.
+- Booking tools are only `get_my_booking` and `request_check_in_or_out`.
+- Kitchen tools are only `get_menu_and_kitchen_status` and `place_room_order`.
+- Gated tools return a proposal. `booking_service.commit` and `kitchen_service.commit` run only after `grant_approval()`.
+- Bind `GuestContext` in the app and pass it into specialists. Do not add guest id or room to tool schemas.
+- Block other rooms in `scope.other_rooms` before a tool call.
+- Caps in `config/safety.yaml` must stop the loop with a `Stopped:` message.
+- Relay specialist text. Do not say an action is confirmed unless status is `completed`.
+- Keep mock data in JSON. Business rules return status payloads, not uncaught exceptions.
+
+Story notes live in `docs/stories/`. The design note is `docs/design-note.md`.

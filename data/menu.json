@@ -1,0 +1,10 @@
+[
+  {"id": "m-sandwich", "name": "Veg Sandwich", "price": 180, "allergens": ["gluten"], "stock": 12},
+  {"id": "m-coffee", "name": "Coffee", "price": 80, "allergens": [], "stock": 30},
+  {"id": "m-chikki", "name": "Peanut Chikki", "price": 40, "allergens": ["peanuts"], "stock": 8},
+  {"id": "m-omelette", "name": "Masala Omelette", "price": 150, "allergens": ["eggs"], "stock": 0},
+  {"id": "m-idli", "name": "Idli Sambar", "price": 120, "allergens": [], "stock": 15},
+  {"id": "m-chai", "name": "Masala Chai", "price": 40, "allergens": ["milk"], "stock": 25},
+  {"id": "m-fruit", "name": "Fruit Bowl", "price": 160, "allergens": [], "stock": 6},
+  {"id": "m-paratha", "name": "Aloo Paratha", "price": 140, "allergens": ["gluten"], "stock": 10}
+]

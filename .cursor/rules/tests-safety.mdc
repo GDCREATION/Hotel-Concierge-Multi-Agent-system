@@ -1,0 +1,14 @@
+---
+description: Safety tests that must stay green
+globs: tests/**/*.py
+alwaysApply: false
+---
+
+# Safety tests
+
+- Tests use the autouse copy of `data/` via `HOSTEL_DATA_DIR`. Do not write the repo `data/` files.
+- Keep a test that kitchen tools and booking tools are disjoint, using the live MCP list.
+- Keep a test that commit without `grant_approval()` does not change JSON.
+- Keep a test that a model argument `room=204` still returns room 305.
+- Keep a test that a looping model stops with a message starting `Stopped:`.
+- Reference behavior lives in `tests/test_reference.py`. If you change guest-facing copy, update that file and regenerate `traces/`.

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "hostel-concierge": {
+      "command": ".venv/bin/python",
+      "args": ["-m", "hostel_concierge.mcp_server"],
+      "env": {
+        "PYTHONPATH": "src",
+        "HOSTEL_GUEST_ID": "g-305",
+        "HOSTEL_ROOM": "305",
+        "HOSTEL_NOW": "2026-11-24T08:30:00"
+      }
+    }
+  }
+}

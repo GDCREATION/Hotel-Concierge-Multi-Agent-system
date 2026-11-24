@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.env
+.DS_Store
+traces/sessions/
+LOCAL_DEMO_RUNBOOK.md

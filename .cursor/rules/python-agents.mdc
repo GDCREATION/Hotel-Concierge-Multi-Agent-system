@@ -1,0 +1,14 @@
+---
+description: LangGraph and MCP patterns for the concierge package
+globs: src/**/*.py
+alwaysApply: false
+---
+
+# Agent code
+
+- Guest-facing turns go through `Session.ask`. That resets orchestrator counters and passes `guest_id` / `room` from the app.
+- Approval uses `interrupt()` inside `safety/approval.py`. Resume with `Command(resume={"approved": bool})`.
+- A node that calls `interrupt()` restarts on resume. Keep previews free of writes so the replay is safe.
+- MCP calls go through `mcp_client.mcp_call`. Do not import commit functions into the model tool list.
+- Live model calls use Amazon Bedrock (`HOSTEL_MODEL=bedrock`). `scripted` is only for pytest and saved traces.
+- Catch tool failures at the MCP boundary and return `{status, message}`. Re-raise `GraphInterrupt`.

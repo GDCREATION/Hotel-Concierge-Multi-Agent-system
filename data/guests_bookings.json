@@ -1,0 +1,42 @@
+[
+  {
+    "id": "g-305",
+    "name": "Asha Menon",
+    "room": "305",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-26",
+    "status": "checked-in"
+  },
+  {
+    "id": "g-204",
+    "name": "Liam Chen",
+    "room": "204",
+    "check_in": "2026-11-22",
+    "check_out": "2026-11-28",
+    "status": "checked-in"
+  },
+  {
+    "id": "g-101",
+    "name": "Priya Shah",
+    "room": "101",
+    "check_in": "2026-11-18",
+    "check_out": "2026-11-22",
+    "status": "checked-out"
+  },
+  {
+    "id": "g-412",
+    "name": "Noah Brooks",
+    "room": "412",
+    "check_in": "2026-11-26",
+    "check_out": "2026-11-30",
+    "status": "booked"
+  },
+  {
+    "id": "g-218",
+    "name": "Elena Rossi",
+    "room": "218",
+    "check_in": "2026-11-21",
+    "check_out": "2026-11-25",
+    "status": "checked-in"
+  }
+]

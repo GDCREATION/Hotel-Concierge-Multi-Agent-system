@@ -1,0 +1,37 @@
+[project]
+name = "hostel-concierge"
+version = "0.1.0"
+description = "Multi-agent Sunrise Hostel concierge: an orchestrator delegates to booking and kitchen specialists over MCP."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=1.0",
+    "langchain>=0.3",
+    "langchain-core>=0.3",
+    "langchain-aws>=0.2",
+    "boto3>=1.35",
+    "fastmcp>=2.2",
+    "pydantic>=2",
+    "pyyaml>=6",
+    "rich>=13",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+hostel-concierge = "hostel_concierge.cli:main"
+hostel-mcp = "hostel_concierge.mcp_server:main"
+hostel-traces = "hostel_concierge.trace_runner:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
